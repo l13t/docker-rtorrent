@@ -1,2 +1,3 @@
 # docker-rtorrent
-Docker image with rtorrent compiled with enabled XML-RPC
+
+This docker image runs rtorrent with enabled XML-RPC.
