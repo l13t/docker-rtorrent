@@ -7,7 +7,7 @@ name: Docker
 
 on:
   schedule:
-    - cron: '19 6 * * *'
+    - cron: '19 6 * * 0'
   push:
     branches: [ master ]
     # Publish semver tags as releases.
@@ -36,7 +36,7 @@ jobs:
 
       - name: set release date
         run: |
-          echo "RELEASE_DATE=$(date --rfc-3339=date)" >> ${GITHUB_ENV}
+          echo "RELEASE_DATE=$(date '+%Y%m%d')" >> ${GITHUB_ENV}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
